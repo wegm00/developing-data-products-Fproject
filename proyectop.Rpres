@@ -1,0 +1,41 @@
+Developing Data Products - Final Course Project
+========================================================
+author: Werner Eduardo Garcia
+date: 29/12/2020
+autosize: true
+
+Introduction
+========================================================
+Have you ever wondered how much your wage could be according to your age and educational level?
+
+This shiny app will predict your Wage based on your input of these factors
+
+
+Data of reference
+========================================================
+For doing this study we use the dataset Wage, this are the structure
+```{r, message= FALSE}
+library(ISLR)
+library(ggplot2)
+data(Wage)
+
+summary(Wage)
+
+```
+
+Summary plot of the Data
+========================================================
+
+```{r, echo=FALSE}
+qq <- qplot(age,wage,colour = education,data = Wage)
+qq <- qq + geom_smooth (method= 'lm',formula= y~x)
+plot(qq)
+```
+
+
+
+Links
+========================================================
+
+- shiny app:  https://wegm00.shinyapps.io/Proyecto/
+- Source code: https://github.com/wegm00/developing-data-products-Fproject
